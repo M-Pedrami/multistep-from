@@ -3,10 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 import Switch from "./Switch";
 
-const PlanSelection = () => {
+const PlanSelection = ({ step, setStep }) => {
   const [yearly, setYearly] = useState(true);
-  console.log(yearly)
-  
+  console.log(yearly);
+
   return (
     <div className="flex flex-col gap-2 w-5/6 py-5 px-2">
       <div>
@@ -43,16 +43,17 @@ const PlanSelection = () => {
           </div>
         </div>
         <div className="flex  justify-center gap-5 w-full bg-gray-200 rounded-md py-5">
-          <span className={`${yearly  ? "font-bold" : ""}`}>
-            Yearly
-          </span>
+          <span className={`${yearly ? "font-bold" : ""}`}>Yearly</span>
           <Switch setYearly={setYearly} />
-          <span className={`${!yearly ? "font-bold" : ""}`}>
-            Monthly
-          </span>
+          <span className={`${!yearly ? "font-bold" : ""}`}>Monthly</span>
         </div>
         <div className="flex justify-between mt-5">
-          <button className="px-5 py-3 bg-black text-white rounded-md">
+          <button
+            className="px-5 py-3 bg-black text-white rounded-md"
+            onClick={() => {
+              setStep((prev) => prev - 1);
+            }}
+          >
             Back
           </button>
           <button className="px-5 py-3 bg-black text-white rounded-md">
