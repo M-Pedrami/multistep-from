@@ -1,7 +1,7 @@
 const Steps = () => {
   return (
     <div
-      className="w-fit pt-5 pb-42 px-[40px] flex flex-col gap-4 rounded-md "
+      className="w-fit h-[550px] pt-5 pb-42 px-[40px] flex flex-col gap-4 rounded-md "
       style={{
         backgroundImage: `url("/bg-sidebar-desktop.svg")`,
         backgroundPosition: "center",

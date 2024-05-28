@@ -8,7 +8,8 @@ const Form = () => {
       {/* Steps */}
       <Steps />
       {/* Input Fields */}
-      <PlanSelection/>
+       <PlanSelection/>
+      {/* <PersonalInfo /> */}
     </div>
   );
 };
