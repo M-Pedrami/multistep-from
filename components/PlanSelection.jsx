@@ -17,7 +17,7 @@ const PlanSelection = ({ step, setStep }) => {
       </div>
       <div className="flex flex-col gap-5 pt-5 w-5/6">
         <div className="flex  justify-between gap-5">
-          <div className="border-2 border-gray-200 py-5 pl-2 pr-10 flex flex-col items-start w-[200px] rounded-md">
+          <div className="border-2 border-gray-200 py-3 pl-2 pr-4 flex flex-col items-start w-[250px]  rounded-md">
             <Image src="/icon-arcade.svg" width={50} height={50} />
             <span className="font-bold mt-10">Arcade</span>
             <span className="font-sm text-gray-400">$9/mo</span>
@@ -25,7 +25,7 @@ const PlanSelection = ({ step, setStep }) => {
               <span className="font-sm text-gray-500">2 months free</span>
             )}
           </div>
-          <div className="border-2 border-gray-200 py-5 pl-2 pr-10 flex flex-col items-start w-[200px] rounded-md">
+          <div className="border-2 border-gray-200 py-3 pl-2 pr-4 flex flex-col items-start w-[250px]  rounded-md">
             <Image src="/icon-advanced.svg" width={50} height={50} />
             <span className="font-bold mt-10">Advanced</span>
             <span className="font-sm text-gray-400">$12/mo</span>
@@ -33,12 +33,12 @@ const PlanSelection = ({ step, setStep }) => {
               <span className="font-xs text-gray-500">2 months free</span>
             )}
           </div>
-          <div className="border-2 border-gray-200 py-5 pl-2 pr-10 flex flex-col items-start w-[200px] rounded-md">
+          <div className="border-2 border-gray-200 py-3 pl-2 pr-4 flex flex-col items-start w-[250px]  rounded-md">
             <Image src="/icon-pro.svg" width={50} height={50} />
             <span className="font-bold mt-10">Pro</span>
             <span className="font-sm text-gray-400">$15/mo</span>
             {yearly && (
-              <span className="font-sm text-gray-500">2 months free</span>
+              <span className="font-sm text-gray-500 w-">2 months free</span>
             )}
           </div>
         </div>
@@ -56,7 +56,12 @@ const PlanSelection = ({ step, setStep }) => {
           >
             Back
           </button>
-          <button className="px-5 py-3 bg-black text-white rounded-md">
+          <button
+            className="px-5 py-3 bg-black text-white rounded-md"
+            onClick={() => {
+              setStep((prev) => prev + 1);
+            }}
+          >
             Next Step
           </button>
         </div>
